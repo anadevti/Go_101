@@ -97,7 +97,7 @@ func flipcoin(side string) {
 	}
 }
 
-// looping - Iterar várias vezes sobre o mesmo bloco de código
+// looping - Iterar várias vezes sobre o mesmo bloco de código. Veremos as principais formas
 // for
 
 func loop() {
@@ -106,8 +106,38 @@ func loop() {
 	}
 }
 
-func main() { // função principal da app, temos que chamar as outras funções dentro dela para que a app funcione
-	name = "aninha"
+// Ex com um Array de nomes
+
+func loop_ex2() {
+	names := []string{"aninha", "joao", "maria"}
+	for i := 0; i < len(names); i++ {
+		fmt.Println("i:", names[i])
+	}
+}
+
+// segunda forma de fazer um loop, usando range que é uma função que retorna o indice e o valor do array
+
+func loop_ex3() {
+	names := []string{"aninha", "Raissa", "maria"}
+	for _, name := range names {
+		fmt.Println(name)
+	}
+}
+
+// terceira forma, como se fosse um while - então temos que criar uma variavel e incrementar ela dentro do bloco de código
+
+func loop_ex4() {
+	names := []string{"aninha", "Raissa", "maria"}
+	var i int
+	for i < len(names) {
+		fmt.Println(names[i])
+		i++
+	}
+}
+
+// função principal da app, temos que chamar as outras funções dentro dela para que a app funcione
+func main() {
+	//name = "aninha"
 	//fmt.Println("Hello,", name)
 	//sum(1, 2)
 	//fmt.Println("Soma:", sum(1, 2))
@@ -115,5 +145,8 @@ func main() { // função principal da app, temos que chamar as outras funções
 	//conditionals()
 	//openfile()
 	//flipcoin("")
-	loop()
+	//loop()
+	//loop_ex2()
+	//loop_ex3()
+	loop_ex4()
 }
